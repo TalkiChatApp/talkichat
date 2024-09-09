@@ -1,0 +1,85 @@
+{
+  "general": {
+    "talkichat": "talkichat.",
+    "create": "create",
+    "update": "update",
+    "delete": "delete",
+    "edit": "edit",
+    "language": "language",
+    "separator": ",",
+    "chats": "Chats",
+    "soon": "soon",
+    "lorem": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure mollitia at consectetur ducimus expedita minus debitis nisi perspiciatis accusantium asperiores, vero libero ab quisquam quod sed eius sequi rem nam!"
+  },
+  "lang": {
+    "english": "english",
+    "persian": "persian",
+    "en": "EN",
+    "fa": "FA"
+  },
+  "actions": {
+    "create": "{type} created",
+    "update": "{type} updated",
+    "delete": "{type} deleted",
+    "failed": "{type} {action} failed"
+  },
+  "sidebar": {
+    "home": "Your Chats",
+    "location": "Find Others on Map",
+    "contacts": "Your Contacts",
+    "notifications": "Notifications",
+    "settings": "Settings",
+    "profile": "Profile"
+  },
+  "context_menu": {
+    "edit_contact": "Edit Contact",
+    "delete_chat": "Delete Chat",
+    "edit_message": "Edit Message",
+    "reply_to": "Reply to",
+    "delete_message": "Delete Message"
+  },
+  "metadata": {
+    "name": "talkichat.",
+    "desc": ""
+  },
+  "register_metadata": {
+    "title": "register",
+    "desc": ""
+  },
+  "not_found": {
+    "title": "Not found what you was looking for.",
+    "desc": "You can search it again or back to home page",
+    "button": "Back to Home Page"
+  },
+  "languages": {
+    "english": "English",
+    "persian": "Persian"
+  },
+  "navigation": {
+    "home": "Home"
+  },
+"page": {
+  "select_a_chat": "Please select a chat to start messaging",
+  "input_placeholder":"type your message here ..."
+},
+  "register_page": {
+    "title": "Register",
+    "subtitle": "It's time to register for your account",
+    "desc": "Doesn't matter if you have an account or not. To register, enter your email address, and we will send you a verification link via email.",
+    "submit_email": "Send a verification email",
+    "google": "Register with Google",
+    "or_use_other_ways": "or use other ways",
+    "in_progress": "Please wait a minute. It's in progress ...",
+    "success": "Check your email to verify and register",
+    "error": "Something went wrong. Try again later"
+  },
+  "logout_modal": {
+    "title": "Do you really want to logout?",
+    "subtitle": "Let me know that your really want to logout or not",
+    "yes_button": "Yes, Logout!",
+    "close_button": "Cancel"
+  },
+  "server": {
+    "error": "An error occurred while trying to connect to the server."
+  }
+}

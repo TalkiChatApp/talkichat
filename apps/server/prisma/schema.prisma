@@ -1,0 +1,100 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator zod {
+  provider              = "zod-prisma"
+  output                = "./zod"
+  relationModel         = true
+  modelCase             = "camelCase"
+  modelSuffix           = "Schema"
+  useDecimalJs          = true
+  prismaJsonNullability = true
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id String @id @default(uuid()) @map("id")
+
+  publicId String @default(cuid())
+
+  name     String? @db.VarChar(90)
+  email    String  @unique
+  username String?
+  phone    String?
+  image    String?
+
+  provider String?
+  oauth_id String?
+
+  verified Boolean @default(false)
+
+  chats Chat[]
+
+  messages Message[]
+
+  createdAt DateTime @default(now()) @map(name: "created_at")
+  updatedAt DateTime @default(now()) @map(name: "updated_at")
+
+  @@map("users")
+}
+
+model Contact {
+  id String @id @default(uuid()) @map("id")
+
+  publicId String @default(cuid())
+
+  name  String
+  email String
+  phone String @unique
+
+  createdAt DateTime @default(now()) @map(name: "created_at")
+  updatedAt DateTime @default(now()) @map(name: "updated_at")
+
+  @@map("contacts")
+}
+
+model Chat {
+  id String @id @default(uuid()) @map("id")
+
+  publicId String @default(cuid())
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  members String[]
+
+  messages Message[]
+
+  createdAt DateTime @default(now()) @map(name: "created_at")
+  updatedAt DateTime @default(now()) @map(name: "updated_at")
+
+  @@map("chats")
+}
+
+model Message {
+  id String @id @default(uuid()) @map("id")
+
+  publicId String @default(cuid())
+
+  userId String
+  chatId String
+
+  content String
+
+  images String[]
+  videos String[]
+  audio  String[]
+
+  createdAt DateTime @default(now()) @map(name: "created_at")
+  updatedAt DateTime @default(now()) @map(name: "updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  chat Chat @relation(fields: [chatId], references: [id], onDelete: Cascade)
+
+  @@map("messages")
+}
