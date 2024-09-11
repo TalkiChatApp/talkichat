@@ -11,9 +11,9 @@ export default async function layout({
     await checkAuth()
 
      return (
-          <div className="flex w-full h-full">
+          <div className="flex w-full h-screen overflow-auto">
                <Sidebar />
-               <Separator orientation="vertical" className="w-[2px] bg-primary/10" />
+               <Separator orientation="vertical" className="w-[1px] bg-primary/10" />
                <div className="flex-grow">
                     {children}
                </div>
