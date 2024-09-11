@@ -35,7 +35,7 @@ export default async  function RootLayout({
       <body
         className={cn(
           font,
-          "relative antialiased flex min-h-screen max-h-screen h-screen w-full items-center justify-center",
+          "relative antialiased flex min-h-screen w-full items-center justify-center",
         )}>
         <NextIntlClientProvider
             locale={locale}

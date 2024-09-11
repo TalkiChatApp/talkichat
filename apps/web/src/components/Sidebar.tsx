@@ -72,7 +72,7 @@ const Sidebar = () => {
                     <SidebarItem
                          onClick={() => onOpen("logout")}
                          hover={tSidebar("profile")}>
-                         <Avatar className="p-[2px]">
+                         <Avatar className="p-[1px]">
                               {/* <AvatarImage className="rounded-full" src="https://github.com/omidshababdev.png" alt="@omidshababdev" /> */}
                               <AvatarFallback className="text-[15px] font-normal">OS</AvatarFallback>
                          </Avatar>
